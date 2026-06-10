@@ -1,2 +1,7 @@
 PyPDF2
 python-docx
+langchain
+langchain-core
+langchain-openai
+openai
+uvicorn
