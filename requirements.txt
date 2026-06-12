@@ -1,5 +1,7 @@
 PyPDF2
 python-docx
+openpyxl
+xlrd
 langchain
 langchain-core
 langchain-openai

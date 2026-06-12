@@ -51,12 +51,80 @@ def extract_text(file_path: str) -> Optional[str]:
             text = "\n".join([para.text for para in doc.paragraphs])
             logger.debug(f"Word 提取完成: {len(doc.paragraphs)} 段落")
             return text
+        elif ext == '.xlsx':
+            logger.debug(f"使用 openpyxl 提取 Excel xlsx 内容")
+            from openpyxl import load_workbook
+            workbook = load_workbook(file_path, read_only=True, data_only=True)
+            rows = []
+            for sheet in workbook.worksheets:
+                rows.append(f"Sheet: {sheet.title}")
+                for row in sheet.iter_rows(values_only=True):
+                    row_text = "\t".join("" if cell is None else str(cell) for cell in row)
+                    if row_text.strip():
+                        rows.append(row_text)
+            text = "\n".join(rows)
+            logger.debug(f"Excel xlsx 提取完成: {len(workbook.worksheets)} 个工作表")
+            return text
+        elif ext == '.xls':
+            logger.debug(f"使用 xlrd 提取 Excel xls 内容")
+            from xlrd import open_workbook
+            workbook = open_workbook(file_path)
+            rows = []
+            for sheet in workbook.sheets():
+                rows.append(f"Sheet: {sheet.name}")
+                for row_idx in range(sheet.nrows):
+                    row = [sheet.cell_value(row_idx, col_idx) for col_idx in range(sheet.ncols)]
+                    row_text = "\t".join("" if cell is None else str(cell) for cell in row)
+                    if row_text.strip():
+                        rows.append(row_text)
+            text = "\n".join(rows)
+            logger.debug(f"Excel xls 提取完成: {len(workbook.sheets())} 个工作表")
+            return text
         else:
             logger.debug(f"不支持的文件类型: {ext}")
             return None
     except Exception as e:
         logger.warning(f"文件解析失败: {file_path} - 错误: {str(e)}")
         return None
+
+
+def save_parsed_documents_to_test_folder(documents: List[Dict[str, str]], output_dir: Optional[Path] = None) -> str:
+    """Save parsed documents to a markdown file.
+
+    By default saves to the current working directory. If `output_dir` is provided,
+    it will be used instead.
+    """
+    if output_dir is None:
+        output_dir = Path.cwd()
+    else:
+        output_dir = Path(output_dir)
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_file = output_dir / 'parsed_business_documents.md'
+    with output_file.open('w', encoding='utf-8') as f:
+        f.write('# 解析后的业务文档内容\n\n')
+        for doc in documents:
+            rel_path = doc.get('path', 'unknown')
+            content = doc.get('content', '')
+            ext = Path(rel_path).suffix.lower()
+
+            f.write(f"## {rel_path}\n\n")
+            f.write(f"- 文件类型: {ext or '未知'}\n\n")
+
+            # 如果原文件是 Markdown，直接写入内容；否则放入代码块保留格式
+            if ext in ['.md', '.markdown']:
+                f.write(content.rstrip() + "\n\n")
+            else:
+                # 避免内容中出现 ```，选择合理的围栏长度
+                fence = '```'
+                if '```' in content:
+                    fence = '````'
+                f.write(f"{fence}\n")
+                f.write(content.rstrip() + "\n")
+                f.write(f"{fence}\n\n")
+    logger.info(f"已将解析文档保存到: {output_file}")
+    return str(output_file)
+
 
 @logged_node
 def parse_files_node(state: SRSState, config=None) -> SRSState:
@@ -75,6 +143,10 @@ def parse_files_node(state: SRSState, config=None) -> SRSState:
     else:
         logger.info("跳过代码库解析 (未提供路径)")
     
+    # Save parsed documents to current working directory
+    saved_path = save_parsed_documents_to_test_folder(docs, output_dir=Path.cwd())
+    logger.info(f"已保存解析文档到当前目录: {saved_path}")
+
     logger.info(f"读取模板文件: {state['template_path']}")
     with open(state["template_path"], 'r', encoding='utf-8') as f:
         state["template_content"] = f.read()

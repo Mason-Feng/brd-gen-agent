@@ -22,6 +22,7 @@ if __name__ == "__main__":
         "documents": [],
         "context_text": "",
         "template_content": "",
+        "template_sections": [],
         "outline": [],
         "sections_content": {},
         "current_section_idx": 0,

@@ -12,6 +12,7 @@ class SRSState(TypedDict):
     documents: List[Dict[str, str]] # {"path": "相对路径", "content": "文本内容"}
     context_text: str               # 拼接后的全文上下文
     template_content: str           # 模板原文
+    template_sections: List[Dict[str, str]] # 模板中每个章节的标题与填充要求
     outline: List[str]              # 大纲标题列表，如 ["## 1. 引言", "## 2. 总体描述", ...]
     sections_content: Dict[str, str] # key: 标题, value: 生成的内容
     current_section_idx: int        # 当前撰写章节索引
