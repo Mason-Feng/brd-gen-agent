@@ -1,0 +1,144 @@
+2026-06-12 10:50:25 - test.basic - INFO - [test_logging.py:50] - 这是一条信息日志
+2026-06-12 10:50:25 - test.basic - WARNING - [test_logging.py:51] - 这是一条警告日志
+2026-06-12 10:50:25 - test.basic - ERROR - [test_logging.py:52] - 这是一条错误日志
+2026-06-12 10:50:25 - srs_agent - INFO - [logger.py:293] - 使用便捷函数记录日志
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:130] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:130] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:131] - ▶️  开始执行节点: test_node_1
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:131] - ▶️  开始执行节点: test_node_1
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:132] -    时间: 2026-06-12 10:50:25.794
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:132] -    时间: 2026-06-12 10:50:25.794
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:133] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:133] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:136] - 📥 输入状态:
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:136] - 📥 输入状态:
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:139] -    {
+  "input": "str(9 chars)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:139] -    {
+  "input": "str(9 chars)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:146] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:146] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:157] - 📤 输出状态:
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:157] - 📤 输出状态:
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:160] -    {
+  "input": "str(9 chars)",
+  "result_1": "str(9 chars)",
+  "data": "list(5 items)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:160] -    {
+  "input": "str(9 chars)",
+  "result_1": "str(9 chars)",
+  "data": "list(5 items)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:167] - ✅ 节点执行成功 | 耗时: 0.002s
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:167] - ✅ 节点执行成功 | 耗时: 0.002s
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:168] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_1 - INFO - [logger.py:168] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:130] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:130] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:131] - ▶️  开始执行节点: test_node_2
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:131] - ▶️  开始执行节点: test_node_2
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:132] -    时间: 2026-06-12 10:50:25.798
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:132] -    时间: 2026-06-12 10:50:25.798
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:133] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:133] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:136] - 📥 输入状态:
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:136] - 📥 输入状态:
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:139] -    {
+  "input": "str(9 chars)",
+  "result_1": "str(9 chars)",
+  "data": "list(5 items)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:139] -    {
+  "input": "str(9 chars)",
+  "result_1": "str(9 chars)",
+  "data": "list(5 items)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:146] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:146] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:157] - 📤 输出状态:
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:157] - 📤 输出状态:
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:160] -    {
+  "input": "str(9 chars)",
+  "result_1": "str(9 chars)",
+  "data": "list(5 items)",
+  "result_2": "str(9 chars)",
+  "metadata": "dict(2 keys)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:160] -    {
+  "input": "str(9 chars)",
+  "result_1": "str(9 chars)",
+  "data": "list(5 items)",
+  "result_2": "str(9 chars)",
+  "metadata": "dict(2 keys)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:167] - ✅ 节点执行成功 | 耗时: 0.002s
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:167] - ✅ 节点执行成功 | 耗时: 0.002s
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:168] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_2 - INFO - [logger.py:168] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:130] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:130] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:131] - ▶️  开始执行节点: test_node_error
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:131] - ▶️  开始执行节点: test_node_error
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:132] -    时间: 2026-06-12 10:50:25.801
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:132] -    时间: 2026-06-12 10:50:25.801
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:133] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:133] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:136] - 📥 输入状态:
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:136] - 📥 输入状态:
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:139] -    {
+  "input": "str(4 chars)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:139] -    {
+  "input": "str(4 chars)"
+}
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:146] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:146] - --------------------------------------------------------------------------------
+2026-06-12 10:50:25 - srs_agent.test_node_error - ERROR - [logger.py:178] - ❌ 节点执行失败 | 耗时: 0.001s
+2026-06-12 10:50:25 - srs_agent.test_node_error - ERROR - [logger.py:178] - ❌ 节点执行失败 | 耗时: 0.001s
+2026-06-12 10:50:25 - srs_agent.test_node_error - ERROR - [logger.py:179] -    错误类型: ValueError
+2026-06-12 10:50:25 - srs_agent.test_node_error - ERROR - [logger.py:179] -    错误类型: ValueError
+2026-06-12 10:50:25 - srs_agent.test_node_error - ERROR - [logger.py:180] -    错误信息: 这是一个测试错误
+2026-06-12 10:50:25 - srs_agent.test_node_error - ERROR - [logger.py:180] -    错误信息: 这是一个测试错误
+2026-06-12 10:50:25 - srs_agent.test_node_error - ERROR - [logger.py:181] -    堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\project\brd-gen-agent\srs_agent\utils\logger.py", line 150, in wrapper
+    result = func(state)
+  File "D:\project\brd-gen-agent\srs_agent\tests\test_logging.py", line 40, in test_node_error
+    raise ValueError("这是一个测试错误")
+ValueError: 这是一个测试错误
+2026-06-12 10:50:25 - srs_agent.test_node_error - ERROR - [logger.py:181] -    堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\project\brd-gen-agent\srs_agent\utils\logger.py", line 150, in wrapper
+    result = func(state)
+  File "D:\project\brd-gen-agent\srs_agent\tests\test_logging.py", line 40, in test_node_error
+    raise ValueError("这是一个测试错误")
+ValueError: 这是一个测试错误
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:182] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.test_node_error - INFO - [logger.py:182] - ================================================================================
+2026-06-12 10:50:25 - srs_agent.workflow - INFO - [logger.py:258] - 
+🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+2026-06-12 10:50:25 - srs_agent.workflow - INFO - [logger.py:258] - 
+🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+2026-06-12 10:50:25 - srs_agent.workflow - INFO - [logger.py:259] - 工作流启动: Test Workflow
+2026-06-12 10:50:25 - srs_agent.workflow - INFO - [logger.py:259] - 工作流启动: Test Workflow
+2026-06-12 10:50:25 - srs_agent.workflow - INFO - [logger.py:260] - 启动时间: 2026-06-12 10:50:25
+2026-06-12 10:50:25 - srs_agent.workflow - INFO - [logger.py:260] - 启动时间: 2026-06-12 10:50:25
+2026-06-12 10:50:25 - srs_agent.workflow - INFO - [logger.py:261] - 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+
+2026-06-12 10:50:25 - srs_agent.workflow - INFO - [logger.py:261] - 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+
+2026-06-12 10:50:26 - srs_agent.workflow - INFO - [logger.py:274] - 
+✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+2026-06-12 10:50:26 - srs_agent.workflow - INFO - [logger.py:274] - 
+✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+2026-06-12 10:50:26 - srs_agent.workflow - INFO - [logger.py:275] - 工作流执行成功!
+2026-06-12 10:50:26 - srs_agent.workflow - INFO - [logger.py:275] - 工作流执行成功!
+2026-06-12 10:50:26 - srs_agent.workflow - INFO - [logger.py:276] - 总耗时: 0.500s (0.01分钟)
+2026-06-12 10:50:26 - srs_agent.workflow - INFO - [logger.py:276] - 总耗时: 0.500s (0.01分钟)
+2026-06-12 10:50:26 - srs_agent.workflow - INFO - [logger.py:277] - ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+
+2026-06-12 10:50:26 - srs_agent.workflow - INFO - [logger.py:277] - ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+
